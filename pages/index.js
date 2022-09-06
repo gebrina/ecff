@@ -160,7 +160,7 @@ export default function Home({news}) {
                <h1 className='text-3xl uppercase font-bold text-red-700'>News & Blogs</h1>
              </div>
              <div className='grid grid-cols-1  sm:grid-cols-2 gap-4 md:grid-cols-3'>
-              {news?.slice(0,7).map((news,index)=>{
+              {news?.slice(0,6).map((news,index)=>{
                  return   <>
                     {news.urlToImage?.length>0?<div key={index}>
                  <img src={news.urlToImage} className='w-full h-[354px] object-cover' alt=''/>
@@ -191,12 +191,19 @@ export default function Home({news}) {
 }
 
 export const getStaticProps = async () =>{
-  const response = await fetch('https://newsapi.org/v2/top-headlines?country=us&category=business&apiKey=ce04abf35fd24923ad803b12003dfda3');
+  const response = await fetch('https://newsapi.org/v2/top-headlines?country=us&category=business&apiKey=959819104a8d45e4949a512ddcce84ef');
   const data = await response.json();
   const  news = data.articles;
+  if(Array.isArray(news)){
   return {
     props:{
       news
     }
   }
+}
+ return {
+  props:{
+    news:[]
+  }
+ }
 }

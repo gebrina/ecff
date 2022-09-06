@@ -18,7 +18,7 @@ const Navbar = () =>{
                   gap-4
                   sm:gap-8
                  sm:right-0
-                -top-[${showMenu?0:1000}px]
+                ${showMenu?' top-[40px]':' -top-[1000px]'}
                 sm:relative sm:top-0
                whitespace-nowrap text-xl uppercase `}>
               <Link href={'/'}><a className='hover:text-gray-200'>Home</a></Link>
