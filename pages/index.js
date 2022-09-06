@@ -19,10 +19,10 @@ export default function Home({news}) {
         className='h-screen home bg-cover w-full bg-norepeat absolute top-0' >
         </div>
         <div className='bg-overlay relative  h-screen w-full -top-40'>
-         <div className='flex justify-center items-end gap-y-2 flex-col text-white absolute left-10 md:right-32 top-96'>
+         <div className='flex justify-center items-end gap-y-2 flex-col text-white absolute left-10 md:right-32 top-32 sm:top-96'>
            <h1 className='text-3xl'>Sustainability is Our Core Principle</h1>
            <p className='text-xl'>Las Vegas Casino Closing, Another Will Take Its Place - TheStreet</p>
-           <Link href=""><a className='text-4xl underline transition-all decoration-4 hover:text-gray-300 underline-offset-8'>Learn More</a></Link>
+           <Link href=""><a className='text-4xl underline transition-all decoration-4 hover:text-gray-300 underline-offset-8 pr-12 sm:pr-0'>Learn More</a></Link>
          </div>
         </div>
        
